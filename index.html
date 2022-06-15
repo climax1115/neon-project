@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creating and sharing economic value in a community driven governance. Merging DeFi with the cooperative consensus protocol."/>
+  <title>Nion</title>
+  <link rel="shortcut icon" href="/img/n.png" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="192x192" href="/img/n.png" /><link rel="apple-touch-icon" sizes="512x512" href="/img/n.png" />
+  <link scoped rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body>
+
+<div id="int">
+    <div class="page-flex">
+        <navbar-template></navbar-template>
+        <router-view></router-view>
+    </div>  
+</div>  
+
+<script src="js/vue-router.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/vue-h.js"></script>
+
+<script src='pages/components/navbar.vue.js'></script>
+<script src='pages/portfolio.vue.js'></script>
+<script src='pages/swap.vue.js'></script>
+<script src='pages/stake.vue.js'></script>
+<script src='pages/lending.vue.js'></script>
+<script src='pages/pool.vue.js'></script>
+<script src='pages/apps.vue.js'></script>
+<script src='pages/cvx.vue.js'></script>
+<script src='pages/solsea.vue.js'></script>
+<script src='pages/os.vue.js'></script>
+<script src='pages/alcx.vue.js'></script>
+<script src='pages/s.vue.js'></script>
+<script src='pages/webb.vue.js'></script>
+<script src='pages/juice.vue.js'></script>
+<script src='pages/foundation.vue.js'></script>
+<script src='pages/fractional.vue.js'></script>
+<script src='pages/gem.vue.js'></script>
+<script src='pages/db.vue.js'></script>
+<script src='pages/ni.vue.js'></script>
+<script src='pages/fleek.vue.js'></script>
+<script src='pages/magic.vue.js'></script>
+<script src='pages/snapshot.vue.js'></script>
+
+    <script>
+        Vue.use(VueRouter);
+
+
+        const routes = [{
+            path: '/portfolio',
+            component: portfoliovue
+        },
+        {
+            path: '/swap',
+            component: swapvue
+        },
+        {
+            path: '/stake',
+            component: stakevue
+        },
+        {
+            path: '/lending',
+            component: lendingvue
+        },
+        {
+            path: '/pool',
+            component: poolvue
+        },
+        {
+            path: '/',
+            component: appsvue
+        },
+        {
+            path: '/cvx',
+            component: cvxvue
+        },
+        {
+            path: '/solsea',
+            component: solseavue
+        },
+        {
+            path: '/os',
+            component: osvue
+        },
+        {
+            path: '/alcx',
+            component: alcxvue
+        },
+        {
+            path: '/s',
+            component: svue
+        },
+        {
+            path: '/webb',
+            component: webbvue
+        },
+        {
+            path: '/juice',
+            component: jbvue
+        },
+        {
+            path: '/foundation',
+            component: foundationvue
+        },
+        {
+            path: '/fractional',
+            component: fractionalvue
+        },
+        {
+            path: '/gem',
+            component: gemvue
+        },
+        {
+            path: '/db',
+            component: dbvue
+        },
+        {
+            path: '/ni',
+            component: nivue
+        },
+        {
+            path: '/fleek',
+            component: fleekvue
+        },
+        {
+            path: '/magic',
+            component: magicvue
+        },
+        {
+            path: '/snapshot',
+            component: snapshotvue
+        }
+        ]
+
+        let router = new VueRouter({
+            mode: 'history',
+            routes, // short for `routes: routes`
+            scrollBehavior (to, from, savedPosition) {
+
+             if (to.hash) {
+                return {
+                  selector: to.hash
+                  , offset: { x: 0, y: 65 }
+                }
+              }
+
+              if (savedPosition) {
+                return savedPosition
+              } else {
+                return { x: 0, y: 0 }
+              }
+
+
+            }
+
+        })
+
+        //router.beforeEach((to, from, next) => {
+            //next()
+        //})
+
+        var int = new Vue({
+            el: '#int',
+            watch: {},
+            mounted() {
+
+
+            },
+            router
+        })
+
+    </script>
+ 
+<script src="js/script.js"></script>
+
+    <style type="text/css">
+        .bounce-enter-active {
+          animation: bounce-in .2s;
+        }
+        .fade-enter-active, .fade-leave-active {
+          transition: opacity .2s;
+        }
+        .fade-enter, .fade-leave-to {
+          opacity: 0;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+
+
+header {
+	border: solid 1px black;
+	width: 99%;
+	margin: 0px;
+	/* height: 30px; */
+	/* padding: 5px; */
+}
+
+nav {
+	position: fixed;
+	border: solid 1px black;
+	width: 150px;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+
+#content {
+
+	padding: 10px;
+	border: solid 1px black;
+	width: 89%;
+	margin-left: 170px;
+	margin-top: 5px;
+}
+
+#nav-label {
+	padding-left: 10px;
+}
+
+#nav-links > li {
+	margin-top: 10px;
+	margin-left: 0px;
+}
